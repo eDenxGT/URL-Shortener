@@ -2,7 +2,6 @@
 
 A modern, full-stack URL shortening service that transforms long, unwieldy links into short, manageable URLs with comprehensive analytics. Built with security and user experience in mind.
 
-![URL Shortener Preview](https://via.placeholder.com/1200x600/1a202c/ffffff?text=URL+Shortener+Dashboard)
 
 ## ✨ Features
 
@@ -60,11 +59,31 @@ A modern, full-stack URL shortening service that transforms long, unwieldy links
 
 3. Create a `.env` file in the `api` directory and add your environment variables:
    ```env
+   # Server Configuration
    PORT=5000
+   NODE_ENV=development
+   DOMAIN_URL=http://localhost:5000
+   
+   # MongoDB
    MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   JWT_EXPIRE=30d
+   
+   # JWT
+   JWT_SECRET=your_jwt_secret_key
+   
+   # Email Configuration
+   SMTP_HOST=your_smtp_host
+   SMTP_PORT=465
+   SMTP_USER=your_smtp_username
+   SMTP_PASSWORD=your_smtp_password
+   
+   # Cloudinary (for file uploads)
+   CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+   CLOUDINARY_API_KEY=your_cloudinary_api_key
+   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+   
    ```
+
+   **Note**: Replace placeholder values with your actual configuration. For production, use environment variables or a secure secret management system.
 
 4. Start the backend server:
    ```bash
@@ -125,7 +144,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-- [Your Name](https://github.com/yourusername)
+- [eDen (aka Aadil)](https://github.com/eDenxGT)
 
 ## 🙏 Acknowledgments
 
